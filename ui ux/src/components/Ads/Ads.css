@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .ad-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ad-header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .ad-carousel {
+    position: relative;
+  }
+  
+  .ad-carousel img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
