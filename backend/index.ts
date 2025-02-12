@@ -7,7 +7,7 @@ import ProductRoutes from "./routes/products";
 import cors from 'cors';
 
 const app: express.Application = express();
-const PORT: number = 8000
+const PORT: number = 4000
 
 connectMongoDb('mongodb://127.0.0.1:27017/ecom_kath')
 

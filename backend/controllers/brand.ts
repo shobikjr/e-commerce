@@ -9,15 +9,15 @@ const handleGetAllBrands = async (req: Request, res: Response) => {
 }
 const handleCreateBrand = async (req: Request, res: Response) => {
     console.log("adding");
-    const body = req.body;
-    console.log(body);
-    if (!body || !body.name) {
+    const brand = req.body;
+    console.log(brand);
+    if (!brand.name) {
         res.status(400).json({ msg: 'Brand name is required' });
         return
     }
     const newBrand = await Brand.create({
-        name: body.name,
-        description: body.description
+        name: brand.name,
+        description: brand.description
     })
 
     res.status(201).json(

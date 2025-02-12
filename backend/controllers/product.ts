@@ -22,7 +22,7 @@ const handleCreateNewProduct = async (req: Request, res: Response) => {
             name: body.name,
             brand: body.brand,
             category: body.category,
-            image: body.image,
+            image: body.image || null,
             stock: body.stock,
             price: body.price,
             offer_price: body.offer_price || null,
