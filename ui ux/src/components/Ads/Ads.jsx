@@ -6,7 +6,7 @@ const Ads = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    'https://via.placeholder.com/600x400?text=Ad+1',
+    'https://img.lazcdn.com/us/domino/6623f7bd-c73f-49ec-b158-e7ff89ce5762_NP-1976-688.jpg_2200x2200q80.jpg',
     'https://via.placeholder.com/600x400?text=Ad+2',
     'https://via.placeholder.com/600x400?text=Ad+3',
   ];
@@ -46,3 +46,4 @@ const Ads = () => {
 };
 
 export default Ads;
+

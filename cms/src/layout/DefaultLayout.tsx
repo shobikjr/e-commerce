@@ -1,9 +1,22 @@
-import React, { useState, ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import Header from '../components/Header/index';
 import Sidebar from '../components/Sidebar/index';
+import { useBrandContext } from '../provider/BrandProvider';
+import { useCategoryContext } from '../provider/CategoryProvider';
+import { useProductContext } from '../provider/ProductProvider';
 
 const DefaultLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const brandCtx = useBrandContext();
+  const categoryCtx = useCategoryContext();
+  const prodCtx = useProductContext()
+
+  useEffect(() => {
+    brandCtx.fetchBrands();
+    categoryCtx.fetchCategories();
+    prodCtx.fetchProducts();
+  }, []);
 
   return (
     <div className="dark:bg-boxdark-2 dark:text-bodydark">

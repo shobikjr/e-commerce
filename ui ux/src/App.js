@@ -10,11 +10,13 @@ import Ads from "./components/Ads/Ads";
 import men_banner from './components/Assets/banner_mens.png'
 import women_banner from './components/Assets/banner_women.png'
 import kids_banner from './components/Assets/banner_kids.png'
+import { CartProvider } from "./Context/CartContext";
 
 
 function App() {
   return (
     <div>
+      <CartProvider>
       <BrowserRouter>
         <Ads />
         <Navbar/>
@@ -38,6 +40,7 @@ function App() {
         
         
       </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
